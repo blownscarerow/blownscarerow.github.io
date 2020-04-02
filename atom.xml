@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-04-02T12:52:03.998Z</updated>
+    <updated>2020-04-02T13:10:39.654Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -10,6 +10,117 @@
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[JavaScript]]></title>
+        <id>https://gaixu-github.github.io/post/javascript/</id>
+        <link href="https://gaixu-github.github.io/post/javascript/">
+        </link>
+        <updated>2020-04-02T13:07:48.000Z</updated>
+        <content type="html"><![CDATA[<p>•  	JavaScript的定义<br>
+•	JavaScpit是运行在游览器端的脚本语言,是由游览器解释执行的,它能够让网页和用户有交互功能，增加良好的用户体验效果<br>
+•	前端开发的三大块<br>
+•	HTML：负责网页架构<br>
+•	CSS：负责网页样式<br>
+•	JaveScript：负责网页行为,比如网页和用户的交互效果<br>
+•	JavaScript的使用方式<br>
+•	行内式<br>
+•	内嵌式<br>
+•	外链式<br>
+•	变量和数据类型<br>
+•	定义变量<br>
+•	JaveScript是一种弱类型语言,也就是说不需要指定变量的类型,JaveScpit语句应该以;结尾<br>
+•	变量和数据类型<br>
+•	定义变量的语法格式<br>
+•	var 变量名 = 值<br>
+•	同时定义多个变量可以用&quot;,&quot; 隔开,公用一个&quot;var&quot;关键字<br>
+•	JaveScript注释<br>
+•	注释分为单行注释和多行注释<br>
+•	数据类型<br>
+•	js有六种数据类，包括五种基本数据类型和一种复杂数据类型(objct)<br>
+•	基本数据据类型<br>
+•	number 数字型<br>
+•	string 字符串型<br>
+•	boolean 布尔类型 true 或 false<br>
+•	undefined 类型 变量声明未初始化，它的值就是undefined<br>
+•	null 表示空对象<br>
+•	符合数据类型<br>
+•	JaceScipt对象<br>
+•	变量命名规则<br>
+•	区分大小写<br>
+•	第一个字符必须是字母、下华夏或者美元符号<br>
+•	其他字符可以是字母下划线或数字<br>
+•	匈牙利命名风格<br>
+•	第一个 字母小写，其他字母都大写<br>
+•	函数的调用和定义<br>
+•	函数定义<br>
+•	函数就是可以重复使用的代码块,使用关键字function定义函数<br>
+•	函数调用<br>
+•	函数与调用就是函数名加小括号<br>
+•	定义有参数返回值的函数<br>
+•	定义参数时,如果函数有参数，参数放到小括号里面,函数如果有返回值，函数通过return关键字返回<br>
+•	变量作用域<br>
+•	变量作用域<br>
+•	介绍<br>
+•	变量的适用范围<br>
+•	局部变量<br>
+•	就是在函数内部使用的变量，只能在函数内部使用<br>
+•	全局变量<br>
+•	全局变量就是在函数外定义的变量可以在不同函数中使用<br>
+•	条件语句<br>
+•	跟python基本相同<br>
+•	逻辑运算符<br>
+•	&amp;&amp; and<br>
+•	|| or<br>
+•	！ not<br>
+•	获取标签元素<br>
+•	可以使用内置对象 document上的 getElementByld 方法来获取页面上设置了id属性的标签元素,获取到的是一个html对象,然后给它赋值给一个变量<br>
+•	操作标签元素属性<br>
+•	属性的操作<br>
+•	属性的读取<br>
+•	属性的设置<br>
+•	属性名在js中的写法<br>
+•	Html属性和js里面的属性大多写法一样,但是&quot;class&quot;属性携程&quot;className&quot;<br>
+•	&quot;style&quot;属性里面的属性,有横杠的改成驼峰式<br>
+•	innerHTML<br>
+•	innerHTML可以读取或者设置标签包裹内容<br>
+•	数组及操作方法<br>
+•	数组的介绍<br>
+•	数组就会是一组数据的集合,havescipt中,数组里面的数据可以是不同类型的数据,好比python里面的列表<br>
+•	数组的定义<br>
+•	实例化对象方式创建<br>
+•	var alist = new Array(1,2,3)<br>
+•	字面量方式创建,推荐使用<br>
+•	var alist2 = [{1,2,3},[&quot;a&quot;,&quot;b&quot;&quot;c&quot;]]<br>
+•	多维数组<br>
+•	多维数组指的是数组的成员也是数组,这样的数组叫做多维数组<br>
+•	数组的操作<br>
+•	获取数组的长度 length<br>
+•	根据下标取值<br>
+•	从数组最后添加和删除数据 push pop<br>
+•	根据下标添加和删除元素<br>
+•	arr.splice(start,num,el..)<br>
+•	循环语句<br>
+•	循环语句的介绍<br>
+•	循环语句就是让一部分代码重复执行<br>
+•	for<br>
+•	while<br>
+•	do-while<br>
+•	字符串拼接<br>
+•	字符串拼接<br>
+•	字符串拼接使用&quot;+&quot;运算符<br>
+•	说明：数字和字符串拼接会自动运行类型转换(隐式类型转换),把数字类型转换成字符串类型进行拼接<br>
+•	定时器<br>
+•	定时器的介绍<br>
+•	定时器就是在一段特定的事件后执行某段程序代码<br>
+•	定时器的使用<br>
+•	js定时器有两种创建方式<br>
+•	setTimeout(func[delay,param1 ) 以指定的时间间隔调用函数的定时器<br>
+•	setinterval(func[delay,param1 ) 以指定的时间间隔重复调用一个函数的定时器<br>
+•	第一个参数func 表示定时器需要执行的函数名<br>
+•	第二个参数 delay 时间间隔<br>
+•	第三个 是参数</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://gaixu-github.github.io/post/hello-gridea/</id>
