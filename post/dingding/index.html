@@ -30,30 +30,34 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            每天一个小技巧
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80%E8%8E%B7%E5%8F%96m3u8%E5%9C%B0%E5%9D%80">一.获取m3u8地址</a>
+<ul>
+<li><a href="#1fidder%E7%9A%84%E8%AE%BE%E7%BD%AE">1.fidder的设置</a></li>
+<li><a href="#2%E6%89%93%E5%BC%80%E9%92%89%E9%92%89%E7%BE%A4%E7%9B%B4%E6%92%AD">2.打开钉钉群直播</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E8%BF%9B%E8%A1%8C%E4%B8%8B%E8%BD%BD">二.用m3u8下载器进行下载</a>
+<ul>
+<li><a href="#1%E4%B8%8B%E8%BD%BD%E8%BF%87%E7%A8%8B">1.下载过程</a></li>
+<li><a href="#2%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98">2.注意问题</a>
+<ul>
+<li><a href="#a%E8%AF%AF%E6%8A%A5">a.误报</a></li>
+<li><a href="#b%E4%B8%8B%E8%BD%BD%E5%AD%98%E6%94%BE%E4%BD%8D%E7%BD%AE">b.下载存放位置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E6%96%87%E4%BB%B6%E5%9C%B0%E5%9D%80">三、文件地址</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -97,38 +101,62 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16"> 钉钉群直播下载</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-06-16 / 2 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1592477080562&amp;di=f14757c88d56849fb7a2eaa38afdb829&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_lfill%2Cw_300%2Ch_200%2Cg_faces%2Fimages%2F20200505%2Fae84b7699e67478a8f141bbb134c215d.jpeg" alt="">
+        
+        <div class="post-content yue">
+          <p><mark>注意：只有钉钉群直播才能下载，视频会议无法下载</mark></p>
+<p>本学期受疫情的影响，暂不开学，线上上课，并且返校后进行考试，一些课程用钉钉上，有回放，复习起来比较方便但是看起来不方便，一是只能用钉钉看，二是在线看，<s>费流量啊</s>⚡️，所以尝试下载下来但是………….​</p>
+<img src="http://image.scorner.cn/qiniulmg/20200618142308.png" style="zoom:100%;float:left" />
+<p>从网上找了找，发现钉钉的直播流为m3u8格式，那么方法就很清楚了，分为两步，获取m3u8地址然后进行下载。</p>
+<h2 id="一获取m3u8地址">一.获取m3u8地址</h2>
+<p>我们用fidder抓包来获取m3u8地址</p>
+<h3 id="1fidder的设置">1.fidder的设置</h3>
+<p>根据以下方法设置并且重启</p>
+<img src="http://image.scorner.cn/qiniulmg/20200618142314.gif" style="zoom:50%;float:left" />
+<h3 id="2打开钉钉群直播">2.打开钉钉群直播</h3>
+<img src="http://image.scorner.cn/qiniulmg/20200618142320.gif" alt="钉钉" style="zoom:40%;float:left" />
+<p><mark>选择内容类型为application的那个保存url</mark></p>
+<p>这样我们就获取了m3u8地址</p>
+<h2 id="二用m3u8下载器进行下载">二.用m3u8下载器进行下载</h2>
+<h3 id="1下载过程">1.下载过程</h3>
+<img src="http://image.scorner.cn/qiniulmg/20200618143807.gif" style="zoom:50%;" />
+<p>😃下载完成</p>
+<img src="http://image.scorner.cn/qiniulmg/20200618155049.png" style="zoom: 40%;float:left" />
+<h3 id="2注意问题">2.注意问题</h3>
+<h4 id="a误报">a.误报</h4>
+<p><mark>部分电脑可能出现误报的情形,点击更多信息运行，亲测无毒</mark></p>
+<img src="http://image.scorner.cn/qiniulmg/20200618142331.png" style="zoom:75%;float:left" />
+<h4 id="b下载存放位置">b.下载存放位置</h4>
+<p>在Downloads文件夹下</p>
+<img src="http://image.scorner.cn/qiniulmg/20200618142335.png" style="zoom:50%;float:left" />
+<h2 id="三-文件地址">三、文件地址</h2>
+<pre><code class="language-html">https://thegai.lanzous.com/b01bhri7c
+</code></pre>
+<p>均为绿板，无需安装，解压后即可使用。</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://gaixu-github.github.io/tag/eRXA4B8JC/">
+            <span class="flex-auto">应用</span>
+          </a>
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2020
-            </h2>
-            
-              
-                <a href="https://gaixu-github.github.io/post/dingding/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                     钉钉群直播下载
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-06-16</div>
-              
-            
+
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
 
-        </div>
       </div>
     </div>
 
