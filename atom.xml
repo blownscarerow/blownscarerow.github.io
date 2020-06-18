@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-18T06:44:59.434Z</updated>
+    <updated>2020-06-18T06:51:16.665Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -27,7 +27,7 @@
 <img src="http://image.scorner.cn/qiniulmg/20200618142314.gif" style="zoom:50%;float:left" />
 <h3 id="2打开钉钉群直播">2.打开钉钉群直播</h3>
 <img src="http://image.scorner.cn/qiniulmg/20200618142320.gif" alt="钉钉" style="zoom:40%;float:left" />
-<p><mark>选择内容类型为application的那个一个</mark></p>
+<p><mark>选择内容类型为application的那个保存url</mark></p>
 <p>这样我们就获取了m3u8地址</p>
 <h2 id="二用m3u8下载器进行下载">二.用m3u8下载器进行下载</h2>
 <h3 id="1下载过程">1.下载过程</h3>
