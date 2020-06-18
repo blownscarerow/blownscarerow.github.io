@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-18T06:54:22.837Z</updated>
+    <updated>2020-06-18T06:55:26.400Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="https://gaixu-github.github.io/post/la-la-la-la-ce-shi-wen-zhang/">
         </link>
         <updated>2020-06-16T03:29:57.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="注意只有钉钉群直播才能下载视频会议无法下载"><mark>注意：只有钉钉群直播才能下载，视频会议无法下载</mark></h1>
+        <content type="html"><![CDATA[<p><mark>注意：只有钉钉群直播才能下载，视频会议无法下载</mark></p>
 <p>本学期受疫情的影响，暂不开学，线上上课，并且返校后进行考试，一些课程用钉钉上，有回放，复习起来比较方便但是看起来不方便，一是只能用钉钉看，二是在线看，<s>费流量啊</s>⚡️，所以尝试下载下来但是………….​</p>
 <img src="http://image.scorner.cn/qiniulmg/20200618142308.png" style="zoom:100%;float:left" />
 <p>从网上找了找，发现钉钉的直播流为m3u8格式，那么方法就很清楚了，分为两步，获取m3u8地址然后进行下载。</p>
