@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>妙妙屋</title>
-    <updated>2020-06-18T05:02:13.235Z</updated>
+    <updated>2020-06-18T05:06:05.085Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 妙妙屋</rights>
     <entry>
-        <title type="html"><![CDATA[拉啦啦啦测试文章]]></title>
+        <title type="html"><![CDATA[ 钉钉群直播下载]]></title>
         <id>https://gaixu-github.github.io/post/la-la-la-la-ce-shi-wen-zhang/</id>
         <link href="https://gaixu-github.github.io/post/la-la-la-la-ce-shi-wen-zhang/">
         </link>
@@ -20,6 +20,7 @@
 <p><mark>注意：只有钉钉群直播才能下载，视频会议无法下载</mark></p>
 <p>本学期受疫情的影响，暂不开学，线上上课，并且返校后进行考试，一些课程用钉钉上，有回放，复习起来比较方便但是看起来不方便，一是只能用钉钉看，二是在线看，<s>费流量啊</s>⚡️，所以尝试下载下来但是………….​</p>
 <img src="C:\Users\盖旭\Desktop\QQ图片20200618114037.png" style="zoom:100%;float:left" />
+![](https://gaixu-github.github.io//post-images/1592456727976.gif)
 <p>从网上找了找，发现钉钉的直播流为m3u8格式，那么方法就很清楚了分为两步，获取m3u8地址然后进行下载。</p>
 <h2 id="一获取m3u8地址">一.获取m3u8地址</h2>
 <p>我们用fidder抓包来获取m3u8地址</p>
