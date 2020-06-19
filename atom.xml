@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-19T03:32:54.948Z</updated>
+    <updated>2020-06-19T03:56:44.370Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
     <entry>
-        <title type="html"><![CDATA[# 记一次说有声音频爬取]]></title>
+        <title type="html"><![CDATA[# 记一次有声小说爬取]]></title>
         <id>https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/</id>
         <link href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
         </link>
@@ -48,7 +48,7 @@ for i in range(1, 126):
     # 有时候爬取太快会报错，可以让他适当停一停
     # time.sleep(0.2)
     url1 = 'http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)    # 前93章的地址
-    url2 = 'http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)   # 94-126章地址
+    url2 = 'http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)   # 94-125章地址
     if i &lt;= 93:
         res = requests.get(url=url1, headers=headers)
     else:
