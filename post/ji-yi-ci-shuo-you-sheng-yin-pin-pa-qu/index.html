@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -30,30 +30,30 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            每天一个小技巧
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E5%B0%8F%E8%AF%B4%E9%9F%B3%E9%A2%91%E5%9C%B0%E5%9D%80%E6%89%BE%E5%AF%BB">一、小说音频地址找寻</a>
+<ul>
+<li><a href="#1%E4%BE%9D%E6%AC%A1%E8%BF%9B%E5%85%A5%E5%88%B0%E6%92%AD%E6%94%BE%E4%BD%8D%E7%BD%AE">1.依次进入到播放位置</a></li>
+<li><a href="#2idm%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80">2.idm获取下载地址</a></li>
+<li><a href="#3%E8%A7%84%E5%BE%8B%E5%AF%BB%E6%89%BE">3.规律寻找</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0">二、代码实现</a></li>
+<li><a href="#%E4%B8%89-%E7%BB%93%E6%9E%9C">三、结果</a></li>
+<li><a href="#img-srchttpimagescornercnqiniulmg20200619111735png-altqq%E5%9B%BE%E7%89%8720200619111652-stylezoom-67"><img src="http://image.scorner.cn/qiniulmg/20200619111735.png" alt="QQ图片20200619111652" style="zoom: 67%;" /></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -97,76 +97,83 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="ri-article-line"></i>
-          最新文章
-        </h2>
-        
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-      <a href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=317725294,684669808&amp;fm=26&amp;gp=0.jpg'">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16"># 记一次说有声音频爬取</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-06-19 / 2 min read
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0"># 记一次说有声音频爬取</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-06-19 / 2 min read</div>
-    </div>
-  </section>
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=317725294,684669808&amp;fm=26&amp;gp=0.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p><mark>本文仅供学习使用</mark></p>
+<p>突然心血来潮想听恐怖小说，在网上找了找发现大部分在线有声小说只能在游览器里面听而不能下载到本地，就很不方便，这里记录一下对一篇有声小说的全集下载。步骤分为两步，一找到链接，二批量下载。</p>
+<p>小说地址：http://www.lanren6.com/book/43041.html</p>
+<h3 id="一-小说音频地址找寻">一、小说音频地址找寻</h3>
+<h4 id="1依次进入到播放位置">1.依次进入到播放位置</h4>
+<img src="http://image.scorner.cn/qiniulmg/20200619101958.png" alt="image-20200619101934149" style="zoom:60%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200619102429.png" alt="image-20200619102426676" style="zoom:50%;float:left" />
+<h4 id="2idm获取下载地址">2.idm获取下载地址</h4>
+<img src="http://image.scorner.cn/qiniulmg/20200619101551.png" alt="image-20200619101535118" style="zoom: 67%;float:left" />
+<h4 id="3规律寻找">3.规律寻找</h4>
+<p>小说一共125集，经过多次抓取地址发现：</p>
+<p>前93集地址为</p>
+<pre><code class="language-html">http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(000-093).mp3
+</code></pre>
+<p>94-125地址为</p>
+<pre><code class="language-html">http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(094-125).mp3
+</code></pre>
+<h3 id="二-代码实现">二、代码实现</h3>
+<p>我们用python爬虫带实现批量下载，代码如下</p>
+<pre><code class="language-python">import requests
+import time
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-      <a href="https://gaixu-github.github.io/post/wei-xin-x5-nei-he/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1637389321,2269216168&amp;fm=26&amp;gp=0.jpg'">
+# 设置请求头，模拟游览器
+headers = {
+    'user-agent': &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1&quot;
+}
+
+# 进行循环遍历
+for i in range(1, 126):
+    # 有时候爬取太快会报错，可以让他适当停一停
+    # time.sleep(0.2)
+    url1 = 'http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)    # 前93章的地址
+    url2 = 'http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)   # 94-126章地址
+    if i &lt;= 93:
+        res = requests.get(url=url1, headers=headers)
+    else:
+        res = requests.get(url=url2, headers=headers)
+    music = res.content
+    with open('走阴人{}.mp3'.format(i), 'wb') as file:  # 保存到本地的文件名
+        file.write(res.content)
+        file.flush()
+</code></pre>
+<h3 id="三-结果">三、结果</h3>
+<p>这样我们就把全集给下载下来了。</p>
+<h3 id="img-srchttpimagescornercnqiniulmg20200619111735png-altqq图片20200619111652-stylezoom-67"><img src="http://image.scorner.cn/qiniulmg/20200619111735.png" alt="QQ图片20200619111652" style="zoom: 67%;" /></h3>
+
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://gaixu-github.github.io/post/wei-xin-x5-nei-he/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">微信X5内核</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-06-19 / 2 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-    
-      <a href="https://gaixu-github.github.io/post/dingding/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1592477080562&amp;di=f14757c88d56849fb7a2eaa38afdb829&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_lfill%2Cw_300%2Ch_200%2Cg_faces%2Fimages%2F20200505%2Fae84b7699e67478a8f141bbb134c215d.jpeg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://gaixu-github.github.io/post/dingding/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0"> 钉钉群直播下载</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-06-16 / 2 min read</div>
-    </div>
-  </section>
 
-        <div class="read-more">
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://gaixu-github.github.io/post/wei-xin-x5-nei-he/">
+                <h3 class="post-title">
+                  微信X5内核
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+
       </div>
     </div>
 

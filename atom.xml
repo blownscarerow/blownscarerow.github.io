@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-19T01:54:39.503Z</updated>
+    <updated>2020-06-19T03:21:28.265Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[# 记一次说有声音频爬取]]></title>
+        <id>https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/</id>
+        <link href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
+        </link>
+        <updated>2020-06-19T03:19:05.000Z</updated>
+        <content type="html"><![CDATA[<p><mark>本文仅供学习使用</mark></p>
+<p>突然心血来潮想听恐怖小说，在网上找了找发现大部分在线有声小说只能在游览器里面听而不能下载到本地，就很不方便，这里记录一下对一篇有声小说的全集下载。步骤分为两步，一找到链接，二批量下载。</p>
+<p>小说地址：http://www.lanren6.com/book/43041.html</p>
+<h3 id="一-小说音频地址找寻">一、小说音频地址找寻</h3>
+<h4 id="1依次进入到播放位置">1.依次进入到播放位置</h4>
+<img src="http://image.scorner.cn/qiniulmg/20200619101958.png" alt="image-20200619101934149" style="zoom:60%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200619102429.png" alt="image-20200619102426676" style="zoom:50%;float:left" />
+<h4 id="2idm获取下载地址">2.idm获取下载地址</h4>
+<img src="http://image.scorner.cn/qiniulmg/20200619101551.png" alt="image-20200619101535118" style="zoom: 67%;float:left" />
+<h4 id="3规律寻找">3.规律寻找</h4>
+<p>小说一共125集，经过多次抓取地址发现：</p>
+<p>前93集地址为</p>
+<pre><code class="language-html">http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(000-093).mp3
+</code></pre>
+<p>94-125地址为</p>
+<pre><code class="language-html">http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(094-125).mp3
+</code></pre>
+<h3 id="二-代码实现">二、代码实现</h3>
+<p>我们用python爬虫带实现批量下载，代码如下</p>
+<pre><code class="language-python">import requests
+import time
+
+# 设置请求头，模拟游览器
+headers = {
+    'user-agent': &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1&quot;
+}
+
+# 进行循环遍历
+for i in range(1, 126):
+    # 有时候爬取太快会报错，可以让他适当停一停
+    # time.sleep(0.2)
+    url1 = 'http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)    # 前93章的地址
+    url2 = 'http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/{:0&gt;3d}.mp3'.format(i)   # 94-126章地址
+    if i &lt;= 93:
+        res = requests.get(url=url1, headers=headers)
+    else:
+        res = requests.get(url=url2, headers=headers)
+    music = res.content
+    with open('走阴人{}.mp3'.format(i), 'wb') as file:  # 保存到本地的文件名
+        file.write(res.content)
+        file.flush()
+</code></pre>
+<h3 id="三-结果">三、结果</h3>
+<p>这样我们就把全集给下载下来了。</p>
+<h3 id="img-srchttpimagescornercnqiniulmg20200619111735png-altqq图片20200619111652-stylezoom-67"><img src="http://image.scorner.cn/qiniulmg/20200619111735.png" alt="QQ图片20200619111652" style="zoom: 67%;" /></h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[微信X5内核]]></title>
         <id>https://gaixu-github.github.io/post/wei-xin-x5-nei-he/</id>
