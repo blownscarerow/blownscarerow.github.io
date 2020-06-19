@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-19T03:58:27.577Z</updated>
+    <updated>2020-06-19T04:04:56.957Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -28,7 +28,7 @@
 <h4 id="3规律寻找">3.规律寻找</h4>
 <p>小说一共125集，经过多次抓取地址发现：</p>
 <p>前93集地址为</p>
-<pre><code class="language-html">http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(000-093).mp3
+<pre><code class="language-html">http://kiohhbf.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(001-093).mp3
 </code></pre>
 <p>94-125地址为</p>
 <pre><code class="language-html">http://tingmp33.meiwenfen.com/%E8%B5%B0%E9%98%B4%E4%BA%BA/(094-125).mp3
