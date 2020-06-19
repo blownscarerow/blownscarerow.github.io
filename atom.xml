@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-18T07:59:10.401Z</updated>
+    <updated>2020-06-19T01:05:58.996Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[微信X5内核]]></title>
+        <id>https://gaixu-github.github.io/post/wei-xin-x5-nei-he/</id>
+        <link href="https://gaixu-github.github.io/post/wei-xin-x5-nei-he/">
+        </link>
+        <updated>2020-06-19T01:02:31.000Z</updated>
+        <content type="html"><![CDATA[<p><mark>注：本方法仅供个人学习使用，仅为讨论学习X5内核</mark></p>
+<blockquote>
+<p>X5内核是腾讯基于开源Webkit优化的浏览器渲染引擎，目前除了微信、手机QQ、京东等有30多款APP内置浏览器都是基于X5内核。</p>
+</blockquote>
+<p>我们可以在微信中开启X5内核debug等进行网页的调试等操作，我们以微信中的大学习为例，实现视频的快速跳过。</p>
+<h4 id="一-使用内核调出控制台">一、使用内核，调出控制台</h4>
+<pre><code class="language-html">debugmm.qq.com/?forcex5=true 
+
+http://debugx5.qq.com
+</code></pre>
+<p>将以上链接在微信打开，会得到下面的效果，打开vConsole调试功能</p>
+<img src="http://image.scorner.cn/qiniulmg/20200619073515.gif" style="zoom: 35%;float:left" />
+<h4 id="二-输入代码">二、输入代码</h4>
+<pre><code class="language-html">document.getElementById('Bvideo').currentTime=999;
+</code></pre>
+<p>打开大学习,待视频开始播放后，将代码复制到vConsole中，便实现了视频的跳过</p>
+<img src="http://image.scorner.cn/qiniulmg/20200619081634.gif" style="zoom:40%;float:left" />
+<h4 id="三-注意事项">三、注意事项</h4>
+<h5 id="1一般来说微信内置x5内核如果提示未安装就安装来安装线上内核-如果已安装千万不要再重新安装否则可能会发生奇怪的错误">1.一般来说微信内置X5内核，如果提示未安装，就安装来安装线上内核。<mark>如果已安装千万不要再重新安装，否则可能会发生奇怪的错误</mark>。</h5>
+<img src="http://image.scorner.cn/qiniulmg/20200619090147.png" style="zoom:40%;float:left" />
+<pre><code class="language-html">http://debugtbs.qq.com 
+</code></pre>
+<img src="http://image.scorner.cn/qiniulmg/20200619090157.gif" style="zoom:40%;float:left" />
+<h4 id="2关闭右下角v调试窗口">2.关闭右下角V调试窗口</h4>
+<pre><code class="language-html">http://debugx5.qq.com
+</code></pre>
+<p>重新打开上面链接 取消vConsole的选择即可</p>
+<img src="http://image.scorner.cn/qiniulmg/20200619090052.gif" style="zoom:40%;float:left" />
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ 钉钉群直播下载]]></title>
         <id>https://gaixu-github.github.io/post/dingding/</id>
