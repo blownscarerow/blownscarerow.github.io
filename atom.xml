@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-19T22:34:51.458Z</updated>
+    <updated>2020-06-20T01:42:35.148Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -10,6 +10,72 @@
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[数据可视化制作]]></title>
+        <id>https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/</id>
+        <link href="https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/">
+        </link>
+        <updated>2020-06-20T01:41:44.000Z</updated>
+        <content type="html"><![CDATA[<p>前段时间看BBC新闻发现这样一个图片，便好奇怎么做出来。查阅相关资料后，便做了一个类似的出来。分为两步，一是数据的准备，二是可视化图表的制作。</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620075502.gif" alt="测试1" style="zoom: 50%;float:left" />
+<h4 id="一-数据准备">一、数据准备</h4>
+<h5 id="1每日疫情变化网站推荐">1.每日疫情变化网站推荐</h5>
+<p>国内:</p>
+<pre><code class="language-html">https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner#tab4 
+</code></pre>
+<p>国外：</p>
+<pre><code class="language-html">https://www.worldometers.info/coronavirus/
+https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6
+</code></pre>
+<h5 id="2数据爬取">2.数据爬取</h5>
+<p>以worldometer为例,进入到每个国家详情中发现每日数据在图片中，通过搜索图片中的数据找到了数据的地址</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620083321.png" alt="QQ图片20200620083020" style="zoom: 50%;" float:left/>
+<p>这样我们可以通过xpath定位再通过正则提取到数据，这样我们就拿到了一个国家的整体数据</p>
+<pre><code class="language-python">et = etree.HTML(xml)
+data=et.xpath('//div[@style=&quot;margintop:10px;marginbottom:40px;&quot;]/script[@type=&quot;text/javascript&quot;]/text()')[0]
+ 
+# 提取日期
+dates = re.search(&quot;categories: (.*?)},&quot;, data).group()
+dates = dates.replace(&quot;categories: [&quot;,&quot;&quot;)
+dates = dates.replace(&quot;]        },&quot;,&quot;&quot;)
+ 
+# 提取数量
+counts = re.search(r&quot;data:\s+(.*?)\s+}],&quot;, data).group()
+counts = counts.replace(&quot;data: [&quot;,&quot;&quot;)
+counts = counts.replace(&quot;]        }],&quot;, &quot;&quot;)
+
+# 数据整理
+for i in zip(dates,counts):
+    print(i)
+</code></pre>
+<p>所有国家的数据</p>
+<p>通过观察，每个国家的地址（<mark>部分国家例外</mark>）为</p>
+<pre><code class="language-html">https://www.worldometers.info/coronavirus/country/(国家英文小写)
+</code></pre>
+<p>可以在首页提取到每个国家的名字再使用lower函数进行处理，再依次遍历写入excel即可</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620084607.png" alt="image-20200620084605687" style="zoom: 50%;float:left" />
+<p>最终，我们拿到了数据</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620085212.png" alt="image-20200620085209455" style="zoom: 50%;" />
+<h4 id="二-可视化制作">二、可视化制作</h4>
+<p>推荐一个可视化网站，注册一个账号即可，免费使用</p>
+<pre><code class="language-html">https://app.flourish.studio/login
+</code></pre>
+<img src="http://image.scorner.cn/qiniulmg/20200620085743.png" alt="image-20200620085635032" style="zoom:40%;float:left" />
+<p>里面内置了很多可视化模板，并且免费</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620085739.png" alt="image-20200620085737928" style="zoom:50%;float:left" />
+<p>在DATA将数据进行导入</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620090216.png" alt="image-20200620090214537" style="zoom:33%;flaot:left" />
+<p>在caption中，可以设置事件触发，比如满足什么条件将会出现什么</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620092131.png" alt="image-20200620092127694" style="zoom:50%;float:left" />
+<p>在右侧对需要展示的数据进行选择,格外注意，Image可以设置可视化的头像</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620090403.png" alt="image-20200620090401519" style="zoom:50%;float:left" />
+<p>在preview中则可以对持续时间，标签颜色进行选择</p>
+<img src="C:\Users\盖旭\AppData\Roaming\Typora\typora-user-images\image-20200620090827975.png" alt="image-20200620090827975" style="zoom:50%;float:left" />
+<p>三、结果展示</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620094005.gif" style="zoom: 67%;float:left" />
+<p>希望疫情早早结束</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[记一次有声小说爬取]]></title>
         <id>https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/</id>
