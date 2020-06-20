@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-20T02:22:11.684Z</updated>
+    <updated>2020-06-20T02:28:29.068Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -67,7 +67,7 @@ for i in zip(dates,counts):
 <img src="http://image.scorner.cn/qiniulmg/20200620090216.png" alt="image-20200620090214537" style="zoom:33%;flaot:left" />
 <p>在caption中，可以设置事件触发，比如满足什么条件将会出现什么</p>
 <img src="http://image.scorner.cn/qiniulmg/20200620092131.png" alt="image-20200620092127694" style="zoom:90%;float:left" />
-<p>三、结果展示</p>
+<h4 id="三-结果展示">三、结果展示</h4>
 <img src="http://image.scorner.cn/qiniulmg/20200620094005.gif" style="zoom: 67%;float:left" />
 <p>希望疫情早早结束🙏</p>
 ]]></content>
@@ -122,7 +122,7 @@ for i in range(1, 125):
 </code></pre>
 <h3 id="三-结果">三、结果</h3>
 <p>这样我们就把全集给下载下来了。😁</p>
-<h3 id="img-srchttpimagescornercnqiniulmg20200619111735png-altqq图片20200619111652-stylezoom-67"><img src="http://image.scorner.cn/qiniulmg/20200619111735.png" alt="QQ图片20200619111652" style="zoom: 67%;" /></h3>
+<img src="http://image.scorner.cn/qiniulmg/20200619111735.png" alt="QQ图片20200619111652" style="zoom: 67%;" />
 ]]></content>
     </entry>
     <entry>
@@ -149,12 +149,13 @@ http://debugx5.qq.com
 <p>打开大学习,待视频开始播放后，将代码复制到vConsole中，便实现了视频的跳过</p>
 <img src="http://image.scorner.cn/qiniulmg/20200619081634.gif" style="zoom:100%;float:left" />
 <h4 id="三-注意事项">三、注意事项</h4>
-<h5 id="1一般来说微信内置x5内核如果提示未安装就安装来安装线上内核-如果已安装千万不要再重新安装否则可能会发生奇怪的错误">1.一般来说微信内置X5内核，如果提示未安装，就安装来安装线上内核。<mark>如果已安装千万不要再重新安装，否则可能会发生奇怪的错误</mark>。</h5>
+<h5 id="1提示内核未安装">1.提示内核未安装</h5>
+<p>一般来说微信内置X5内核，如果提示未安装，就安装来安装线上内核。<mark>如果已安装千万不要再重新安装，否则可能会发生奇怪的错误</mark>。</p>
 <pre><code class="language-html">http://debugtbs.qq.com 
 </code></pre>
 <img src="http://image.scorner.cn/qiniulmg/20200619090147.png" style="zoom:100%;float:left" />
 <img src="http://image.scorner.cn/qiniulmg/20200619090157.gif" style="zoom:100%;float:left" />
-<h4 id="2关闭右下角vconsole调试窗口">2.关闭右下角vConsole调试窗口</h4>
+<h4 id="2vconsole调试窗口关闭">2.vConsole调试窗口关闭</h4>
 <pre><code class="language-html">http://debugx5.qq.com
 </code></pre>
 <p>重新打开上面链接 取消vConsole的选择即可</p>
