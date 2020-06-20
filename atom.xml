@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-20T02:39:50.453Z</updated>
+    <updated>2020-06-20T13:51:50.683Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -10,6 +10,99 @@
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[ 爬取qq好友头像制作贴图]]></title>
+        <id>https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/</id>
+        <link href="https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/">
+        </link>
+        <updated>2020-06-20T13:45:40.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Shape Collage Pro(照片拼贴制作器)是一款免费的图片拼贴制作工具。可以轻松制作任意形状的图片拼图，如矩形、心形、圆形、字母形状，甚至绘制自定义形状。制作中Shape Collage允许你调整拼贴大小、图片大小、图片数量、图片间距等一系列参数，其他包括背景、边框颜色等，从而制作出精美的拼贴效果。</p>
+</blockquote>
+<h3 id="一-头像爬取">一、头像爬取</h3>
+<h4 id="1qq头像接口">1.qq头像接口</h4>
+<pre><code class="language-html">https://q4.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=140
+</code></pre>
+<h4 id="2好友qq号码获取">2.好友qq号码获取</h4>
+<p>登录qq邮箱，右击检查，选择Network</p>
+<p>刷新网页，在搜索中搜索laddr_lastlist  后复制response的内容到记事本中</p>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200620212556.gif" alt="测试3" loading="lazy"></figure>
+<h4 id="3头像下载">3.头像下载</h4>
+<h5 id="a代码参考链接">a.代码参考链接</h5>
+<pre><code class="language-html">https://blog.csdn.net/weixin_43347550/article/details/105704623?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159265526719195239836693%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159265526719195239836693&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-3-105704623.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=qq%E5%A4%B4%E5%83%8F%E7%88%AC%E5%8F%96
+</code></pre>
+<h5 id="b更换接口">b.更换接口</h5>
+<p>这里发现楼主爬取的头像为qq空间头像，这里我们换上上面接口，爬取qq头像接口</p>
+<pre><code class="language-python">import re
+import codecs
+import time
+import requests
+
+txtpath = '1.txt'  # 你从QQ邮箱中粘贴的txt文件
+savepath = '头像'  # 头像存储位置
+
+friends_count = 0  # 初始化好友数量
+
+
+def gettouxiang(txtpath):  # 输入你的txt文件存储位置
+    file = codecs.open(txtpath, 'rb', 'utf-8')
+    s = file.read()
+    pattern = re.compile(r'\d+@qq.com')
+    all_mail = pattern.findall(s)  # 正则表达式匹配所有的qq号
+    all_link = []  # 用于存储需要访问的链接
+    url = 'https://q4.qlogo.cn/g?b=qq&amp;nk='
+    for mail in all_mail:
+        qq = mail.replace('@qq.com', '')
+        l = url + qq + '&amp;s=140'
+        all_link.append(l)
+    i = 0  # 初始化下载图片数量
+    friends_count = len(all_link)  # 获取朋友头像数量
+    print('共{}个头像'.format(friends_count))
+    for link in all_link:  # 遍历链接，下载头像
+        i += 1
+        saveurl = savepath + str(i) + '.png'
+        print('第 %d 个' % i, end=' ')
+        savaImg(link, saveurl)
+    return True
+
+
+def savaImg(picurl, saveurl):  # 存储图片函数，picurl是图片的URL，saveurl是本地存储位置
+    try:
+        start = time.time()
+        response = requests.get(picurl, stream=True)
+        with open(saveurl, 'wb') as file:  # 下载图片到本地
+            file.write(response.content)
+            print('【下载完成】:', end=' ')
+        end = time.time()
+        time_ = end - start
+        print('用时: %.2f秒' % (time_))
+        return True
+    except:
+        print('worry')
+        # savaImg(picurl, saveurl)
+
+
+def main():
+    gettouxiang(txtpath)  # 获取头像
+
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<h5 id="c结果展示">c.结果展示</h5>
+<p>这样我们就把好友的头像都下载下来了</p>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200620214734.png" alt="image-20200620212815452" loading="lazy"></figure>
+<h3 id="二-贴图生成">二、贴图生成</h3>
+<p>这里我们使用 shape collage进行图片拼图，导入图片还可以字定义图形，美观且简单</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620214002.png" alt="image-20200620213952116" style="zoom:80%;float:left" />
+<p>效果展示</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620214427.jpg" alt="1" style="zoom: 50%;float:left" />
+<h3 id="三-下载地址">三、下载地址</h3>
+<p>shape collage pro 下载地址</p>
+<pre><code class="language-html">https://thegai.lanzous.com/iTVwzdbagwh
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[数据可视化制作]]></title>
         <id>https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/</id>

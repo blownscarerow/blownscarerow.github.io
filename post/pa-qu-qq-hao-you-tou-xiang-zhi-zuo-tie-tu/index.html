@@ -38,18 +38,21 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#%E4%B8%80-%E5%A4%B4%E5%83%8F%E7%88%AC%E5%8F%96">一、头像爬取</a>
 <ul>
-<li><a href="#%E4%B8%80-%E4%BD%BF%E7%94%A8%E5%86%85%E6%A0%B8%E8%B0%83%E5%87%BA%E6%8E%A7%E5%88%B6%E5%8F%B0">一、使用内核，调出控制台</a></li>
-<li><a href="#%E4%BA%8C-%E8%BE%93%E5%85%A5%E4%BB%A3%E7%A0%81">二、输入代码</a></li>
-<li><a href="#%E4%B8%89-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">三、注意事项</a>
+<li><a href="#1qq%E5%A4%B4%E5%83%8F%E6%8E%A5%E5%8F%A3">1.qq头像接口</a></li>
+<li><a href="#2%E5%A5%BD%E5%8F%8Bqq%E5%8F%B7%E7%A0%81%E8%8E%B7%E5%8F%96">2.好友qq号码获取</a></li>
+<li><a href="#3%E5%A4%B4%E5%83%8F%E4%B8%8B%E8%BD%BD">3.头像下载</a>
 <ul>
-<li><a href="#1%E6%8F%90%E7%A4%BA%E5%86%85%E6%A0%B8%E6%9C%AA%E5%AE%89%E8%A3%85">1.提示内核未安装</a></li>
+<li><a href="#a%E4%BB%A3%E7%A0%81%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">a.代码参考链接</a></li>
+<li><a href="#b%E6%9B%B4%E6%8D%A2%E6%8E%A5%E5%8F%A3">b.更换接口</a></li>
+<li><a href="#c%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA">c.结果展示</a></li>
 </ul>
 </li>
-<li><a href="#2vconsole%E8%B0%83%E8%AF%95%E7%AA%97%E5%8F%A3%E5%85%B3%E9%97%AD">2.vConsole调试窗口关闭</a></li>
 </ul>
 </li>
+<li><a href="#%E4%BA%8C-%E8%B4%B4%E5%9B%BE%E7%94%9F%E6%88%90">二、贴图生成</a></li>
+<li><a href="#%E4%B8%89-%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80">三、下载地址</a></li>
 </ul>
 </li>
 </ul>
@@ -100,70 +103,113 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">微信X5内核</h1>
+        <h1 class="text-3xl font-bold lg:mt-16"> 爬取qq好友头像制作贴图</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-06-19 / 2 min read
+          2020-06-20 / 3 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1637389321,2269216168&amp;fm=26&amp;gp=0.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://image.scorner.cn/qiniulmg/20200620215057.png" alt="">
         
         <div class="post-content yue">
-          <p><mark>注：本方法仅供个人学习使用，仅为讨论学习X5内核</mark></p>
-<blockquote>
-<p>X5内核是腾讯基于开源Webkit优化的浏览器渲染引擎，目前除了微信、手机QQ、京东等有30多款APP内置浏览器都是基于X5内核。</p>
+          <blockquote>
+<p>Shape Collage Pro(照片拼贴制作器)是一款免费的图片拼贴制作工具。可以轻松制作任意形状的图片拼图，如矩形、心形、圆形、字母形状，甚至绘制自定义形状。制作中Shape Collage允许你调整拼贴大小、图片大小、图片数量、图片间距等一系列参数，其他包括背景、边框颜色等，从而制作出精美的拼贴效果。</p>
 </blockquote>
-<p>我们可以在微信中开启X5内核debug等进行网页的调试等操作，我们以微信中的大学习为例，实现视频的快速跳过。</p>
-<h4 id="一-使用内核调出控制台">一、使用内核，调出控制台</h4>
-<pre><code class="language-html">debugmm.qq.com/?forcex5=true 
+<h3 id="一-头像爬取">一、头像爬取</h3>
+<h4 id="1qq头像接口">1.qq头像接口</h4>
+<pre><code class="language-html">https://q4.qlogo.cn/g?b=qq&amp;nk=QQ号码&amp;s=140
+</code></pre>
+<h4 id="2好友qq号码获取">2.好友qq号码获取</h4>
+<p>登录qq邮箱，右击检查，选择Network</p>
+<p>刷新网页，在搜索中搜索laddr_lastlist  后复制response的内容到记事本中</p>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200620212556.gif" alt="测试3" loading="lazy"></figure>
+<h4 id="3头像下载">3.头像下载</h4>
+<h5 id="a代码参考链接">a.代码参考链接</h5>
+<pre><code class="language-html">https://blog.csdn.net/weixin_43347550/article/details/105704623?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159265526719195239836693%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159265526719195239836693&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-3-105704623.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=qq%E5%A4%B4%E5%83%8F%E7%88%AC%E5%8F%96
+</code></pre>
+<h5 id="b更换接口">b.更换接口</h5>
+<p>这里发现楼主爬取的头像为qq空间头像，这里我们换上上面接口，爬取qq头像接口</p>
+<pre><code class="language-python">import re
+import codecs
+import time
+import requests
 
-http://debugx5.qq.com
+txtpath = '1.txt'  # 你从QQ邮箱中粘贴的txt文件
+savepath = '头像'  # 头像存储位置
+
+friends_count = 0  # 初始化好友数量
+
+
+def gettouxiang(txtpath):  # 输入你的txt文件存储位置
+    file = codecs.open(txtpath, 'rb', 'utf-8')
+    s = file.read()
+    pattern = re.compile(r'\d+@qq.com')
+    all_mail = pattern.findall(s)  # 正则表达式匹配所有的qq号
+    all_link = []  # 用于存储需要访问的链接
+    url = 'https://q4.qlogo.cn/g?b=qq&amp;nk='
+    for mail in all_mail:
+        qq = mail.replace('@qq.com', '')
+        l = url + qq + '&amp;s=140'
+        all_link.append(l)
+    i = 0  # 初始化下载图片数量
+    friends_count = len(all_link)  # 获取朋友头像数量
+    print('共{}个头像'.format(friends_count))
+    for link in all_link:  # 遍历链接，下载头像
+        i += 1
+        saveurl = savepath + str(i) + '.png'
+        print('第 %d 个' % i, end=' ')
+        savaImg(link, saveurl)
+    return True
+
+
+def savaImg(picurl, saveurl):  # 存储图片函数，picurl是图片的URL，saveurl是本地存储位置
+    try:
+        start = time.time()
+        response = requests.get(picurl, stream=True)
+        with open(saveurl, 'wb') as file:  # 下载图片到本地
+            file.write(response.content)
+            print('【下载完成】:', end=' ')
+        end = time.time()
+        time_ = end - start
+        print('用时: %.2f秒' % (time_))
+        return True
+    except:
+        print('worry')
+        # savaImg(picurl, saveurl)
+
+
+def main():
+    gettouxiang(txtpath)  # 获取头像
+
+
+if __name__ == '__main__':
+    main()
 </code></pre>
-<p>将以上链接在微信打开，会得到下面的效果，打开vConsole调试功能</p>
-<img src="http://image.scorner.cn/qiniulmg/20200619073515.gif" style="zoom: 100%;float:left" />
-<h4 id="二-输入代码">二、输入代码</h4>
-<pre><code class="language-html">document.getElementById('Bvideo').currentTime=999;
+<h5 id="c结果展示">c.结果展示</h5>
+<p>这样我们就把好友的头像都下载下来了</p>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200620214734.png" alt="image-20200620212815452" loading="lazy"></figure>
+<h3 id="二-贴图生成">二、贴图生成</h3>
+<p>这里我们使用 shape collage进行图片拼图，导入图片还可以字定义图形，美观且简单</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620214002.png" alt="image-20200620213952116" style="zoom:80%;float:left" />
+<p>效果展示</p>
+<img src="http://image.scorner.cn/qiniulmg/20200620214427.jpg" alt="1" style="zoom: 50%;float:left" />
+<h3 id="三-下载地址">三、下载地址</h3>
+<p>shape collage pro 下载地址</p>
+<pre><code class="language-html">https://thegai.lanzous.com/iTVwzdbagwh
 </code></pre>
-<p>打开大学习,待视频开始播放后，将代码复制到vConsole中，便实现了视频的跳过</p>
-<img src="http://image.scorner.cn/qiniulmg/20200619081634.gif" style="zoom:100%;float:left" />
-<h4 id="三-注意事项">三、注意事项</h4>
-<h5 id="1提示内核未安装">1.提示内核未安装</h5>
-<p>一般来说微信内置X5内核，如果提示未安装，就安装来安装线上内核。<mark>如果已安装千万不要再重新安装，否则可能会发生奇怪的错误</mark>。</p>
-<pre><code class="language-html">http://debugtbs.qq.com 
-</code></pre>
-<img src="http://image.scorner.cn/qiniulmg/20200619090147.png" style="zoom:100%;float:left" />
-<img src="http://image.scorner.cn/qiniulmg/20200619090157.gif" style="zoom:100%;float:left" />
-<h4 id="2vconsole调试窗口关闭">2.vConsole调试窗口关闭</h4>
-<pre><code class="language-html">http://debugx5.qq.com
-</code></pre>
-<p>重新打开上面链接 取消vConsole的选择即可</p>
-<img src="http://image.scorner.cn/qiniulmg/20200619090052.gif" style="zoom:100%;float:left" />
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://gaixu-github.github.io/tag/eRXA4B8JC/">
-            <span class="flex-auto">应用</span>
-          </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  记一次有声小说爬取
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://gaixu-github.github.io/post/dingding/">
+              <a href="https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/">
                 <h3 class="post-title">
-                   钉钉群直播下载
+                  数据可视化制作
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
