@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-20T01:50:34.894Z</updated>
+    <updated>2020-06-20T01:52:23.778Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -70,7 +70,7 @@ for i in zip(dates,counts):
 <p>在右侧对需要展示的数据进行选择,格外注意，Image可以设置可视化的头像</p>
 <img src="http://image.scorner.cn/qiniulmg/20200620090403.png" alt="image-20200620090401519" style="zoom:50%;float:left" />
 <p>在preview中则可以对持续时间，标签颜色进行选择</p>
-<img src="C:\Users\盖旭\AppData\Roaming\Typora\typora-user-images\image-20200620090827975.png" alt="image-20200620090827975" style="zoom:50%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200620095131.png" alt="image-20200620090827975" style="zoom:50%;float:left" />
 <p>三、结果展示</p>
 <img src="http://image.scorner.cn/qiniulmg/20200620094005.gif" style="zoom: 67%;float:left" />
 <p>希望疫情早早结束</p>
