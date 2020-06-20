@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-20T01:52:23.778Z</updated>
+    <updated>2020-06-20T01:54:05.667Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -87,10 +87,10 @@ for i in zip(dates,counts):
 <p>小说地址：http://www.lanren6.com/book/43041.html</p>
 <h3 id="一-小说音频地址找寻">一、小说音频地址找寻</h3>
 <h4 id="1依次进入到播放位置">1.依次进入到播放位置</h4>
-<img src="http://image.scorner.cn/qiniulmg/20200619101958.png" alt="image-20200619101934149" style="zoom:60%;float:left" />
-<img src="http://image.scorner.cn/qiniulmg/20200619102429.png" alt="image-20200619102426676" style="zoom:50%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200619101958.png" alt="image-20200619101934149" style="zoom:100%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200619102429.png" alt="image-20200619102426676" style="zoom:100%;float:left" />
 <h4 id="2idm获取下载地址">2.idm获取下载地址</h4>
-<img src="http://image.scorner.cn/qiniulmg/20200619101551.png" alt="image-20200619101535118" style="zoom: 67%;float:left" />
+<img src="http://image.scorner.cn/qiniulmg/20200619101551.png" alt="image-20200619101535118" style="zoom: 100%;float:left" />
 <h4 id="3规律寻找">3.规律寻找</h4>
 <p>小说一共125集，经过多次抓取地址发现：</p>
 <p>前93集地址为</p>
