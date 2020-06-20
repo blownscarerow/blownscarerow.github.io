@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-20T13:56:11.347Z</updated>
+    <updated>2020-06-20T22:45:36.508Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -28,11 +28,7 @@
 <p>刷新网页，在搜索中搜索laddr_lastlist  后复制response的内容到记事本中</p>
 <figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200620212556.gif" alt="测试3" loading="lazy"></figure>
 <h4 id="3头像下载">3.头像下载</h4>
-<h5 id="a代码参考链接">a.代码参考链接</h5>
-<pre><code class="language-html">https://blog.csdn.net/weixin_43347550/article/details/105704623?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159265526719195239836693%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159265526719195239836693&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-3-105704623.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=qq%E5%A4%B4%E5%83%8F%E7%88%AC%E5%8F%96
-</code></pre>
-<h5 id="b更换接口">b.更换接口</h5>
-<p>这里发现楼主爬取的头像为qq空间头像，这里我们换上上面接口，爬取qq头像接口</p>
+<h5 id="a代码实现">a.代码实现</h5>
 <pre><code class="language-python">import re
 import codecs
 import time
@@ -89,7 +85,7 @@ def main():
 if __name__ == '__main__':
     main()
 </code></pre>
-<h5 id="c结果展示">c.结果展示</h5>
+<h5 id="b结果展示">b.结果展示</h5>
 <p>这样我们就把好友的头像都下载下来了</p>
 <figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200620214734.png" alt="image-20200620212815452" loading="lazy"></figure>
 <h3 id="二-贴图生成">二、贴图生成</h3>
@@ -100,6 +96,9 @@ if __name__ == '__main__':
 <h3 id="三-下载地址">三、下载地址</h3>
 <p>shape collage pro 下载地址</p>
 <pre><code class="language-html">https://thegai.lanzous.com/iTVwzdbagwh
+</code></pre>
+<h3 id="四-参考链接">四、参考链接</h3>
+<pre><code class="language-html">https://blog.csdn.net/weixin_43347550/article/details/105704623?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159265526719195239836693%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159265526719195239836693&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-3-105704623.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=qq%E5%A4%B4%E5%83%8F%E7%88%AC%E5%8F%96
 </code></pre>
 ]]></content>
     </entry>
