@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T04:14:31.512Z</updated>
+    <updated>2020-06-21T04:17:33.867Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -39,7 +39,7 @@ for que in ques_list:
     print(temp)
 </code></pre>
 <p>效果如下<br>
-<img src="http://image.scorner.cn/qiniulmg/20200621121142.png" alt="image-20200621121139319" loading="lazy"></p>
+<img src="http://image.scorner.cn/qiniulmg/20200621110336.gif" alt="测试1" loading="lazy"></p>
 <p>这样便获取了图片和答案的构成的字典</p>
 <h5 id="b图片和答案分离">b.图片和答案分离</h5>
 <pre><code class="language-python">import re
@@ -52,7 +52,7 @@ print(answer)
 print(url)
 </code></pre>
 <p>得到了答案和图片地址的列表</p>
-<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200621121142.png" alt="image-20200621121139319" loading="lazy"></figure>
 <h5 id="c图片下载">c.图片下载</h5>
 <pre><code class="language-python">import requests
 import time 
