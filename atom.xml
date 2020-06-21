@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T00:00:49.328Z</updated>
+    <updated>2020-06-21T00:03:06.593Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -22,7 +22,7 @@
 <h3 id="二-破解过程">二、破解过程</h3>
 <h4 id="1查壳">1.查壳</h4>
 <p>把软件放到PEID中查壳，发现软件是用Delphi写的，无壳</p>
-<p>&lt;img src=&quot;http://image.scorner.cn/qiniulmg/20200621070340.png&quot; alt=&quot;image-20200621070329709&quot; style=&quot;zoom: 80%;</p>
+<img src="http://image.scorner.cn/qiniulmg/20200621070340.png" alt="image-20200621070329709" style="zoom: 80%;"/>
 <h4 id="2载入od">2.载入OD</h4>
 <h5 id="a定位程序点">a.定位程序点</h5>
 <p>根据软件特征，在OD中寻找“密码错误”，查看反汇编代码</p>
