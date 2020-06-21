@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T23:17:06.257Z</updated>
+    <updated>2020-06-21T23:18:28.935Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -247,7 +247,7 @@ for m, n in zip(list2, answer): # answer为答案列表
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[软件破解学习笔记——nop填充]]></title>
+        <title type="html"><![CDATA[逆向学习笔记——nop填充]]></title>
         <id>https://gaixu-github.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/</id>
         <link href="https://gaixu-github.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/">
         </link>
