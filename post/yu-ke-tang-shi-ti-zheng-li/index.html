@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>我没有失眠啊i</title>
 <meta name="description" content="每天一个小技巧" />
-<link rel="shortcut icon" href="https://gaixu-github.github.io//favicon.ico?v=1592711424642">
+<link rel="shortcut icon" href="https://gaixu-github.github.io//favicon.ico?v=1592712006172">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://gaixu-github.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://gaixu-github.github.io//images/avatar.png?v=1592711424642" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://gaixu-github.github.io//images/avatar.png?v=1592712006172" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">我没有失眠啊i</h1>
       </div>
@@ -55,6 +55,7 @@
 <li><a href="#c%E5%AF%B9%E8%AF%86%E5%88%AB%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%B8%85%E6%B4%97">c.对识别数据进行清洗</a></li>
 </ul>
 </li>
+<li><a href="#%E5%9B%9B-%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA">四、结果展示</a></li>
 </ul>
 </li>
 </ul>
@@ -118,7 +119,7 @@
           <p>雨课堂经常做随堂测试，但是每个题都是图片形式的，复习起来很不方便。便萌发了整理的念头。</p>
 <img src="http://image.scorner.cn/qiniulmg/20200621103235.png" alt="image-20200621103226678" style="zoom:50%;float:left" />
 <h4 id="一-抓包分析">一、抓包分析</h4>
-<img src="C:\Users\盖旭\AppData\Roaming\Typora\typora-user-images\image-20200621104244301.png" alt="image-20200621104244301" style="zoom: 67%;" />
+<img src="http://image.scorner.cn/qiniulmg/20200621115906.png" alt="image-20200621104244301" style="zoom: 67%;" />
 <p>不得不说雨课堂是真的有钱，试题以图片的方式存储的，试题的图片从js返回，那么思路为获取图片所有的地址并且下载，再批量调用文字识别写即可。</p>
 <h4 id="二-图片获取">二、图片获取</h4>
 <h5 id="a图片和答案字典获取">a.图片和答案字典获取</h5>
@@ -152,7 +153,7 @@ print(answer)
 print(url)
 </code></pre>
 <p>得到了答案和图片地址的列表</p>
-<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
 <h5 id="c图片下载">c.图片下载</h5>
 <pre><code class="language-python">import requests
 import time 
@@ -217,7 +218,7 @@ for m, n in zip(list2, answer): # answer为答案列表
 <figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200621112656.png" alt="image-20200621112651618" loading="lazy"></figure>
 <p>扔到word中，稍微进行修正 如去掉多选题两分，第一章绪论这些 ， 再把 是「cll换成c，再进行局部微调</p>
 <figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200621113236.png" alt="image-20200621113234456" loading="lazy"></figure>
-<p>####四、结果展示</p>
+<h4 id="四-结果展示">四、结果展示</h4>
 <figure data-type="image" tabindex="7"><img src="http://image.scorner.cn/qiniulmg/20200621113447.png" alt="image-20200621113445453" loading="lazy"></figure>
 
         </div>

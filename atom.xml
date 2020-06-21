@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T03:50:28.265Z</updated>
+    <updated>2020-06-21T04:00:14.454Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -19,7 +19,7 @@
         <content type="html"><![CDATA[<p>雨课堂经常做随堂测试，但是每个题都是图片形式的，复习起来很不方便。便萌发了整理的念头。</p>
 <img src="http://image.scorner.cn/qiniulmg/20200621103235.png" alt="image-20200621103226678" style="zoom:50%;float:left" />
 <h4 id="一-抓包分析">一、抓包分析</h4>
-<img src="C:\Users\盖旭\AppData\Roaming\Typora\typora-user-images\image-20200621104244301.png" alt="image-20200621104244301" style="zoom: 67%;" />
+<img src="http://image.scorner.cn/qiniulmg/20200621115906.png" alt="image-20200621104244301" style="zoom: 67%;" />
 <p>不得不说雨课堂是真的有钱，试题以图片的方式存储的，试题的图片从js返回，那么思路为获取图片所有的地址并且下载，再批量调用文字识别写即可。</p>
 <h4 id="二-图片获取">二、图片获取</h4>
 <h5 id="a图片和答案字典获取">a.图片和答案字典获取</h5>
@@ -53,7 +53,7 @@ print(answer)
 print(url)
 </code></pre>
 <p>得到了答案和图片地址的列表</p>
-<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
 <h5 id="c图片下载">c.图片下载</h5>
 <pre><code class="language-python">import requests
 import time 
@@ -118,7 +118,7 @@ for m, n in zip(list2, answer): # answer为答案列表
 <figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200621112656.png" alt="image-20200621112651618" loading="lazy"></figure>
 <p>扔到word中，稍微进行修正 如去掉多选题两分，第一章绪论这些 ， 再把 是「cll换成c，再进行局部微调</p>
 <figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200621113236.png" alt="image-20200621113234456" loading="lazy"></figure>
-<p>####四、结果展示</p>
+<h4 id="四-结果展示">四、结果展示</h4>
 <figure data-type="image" tabindex="7"><img src="http://image.scorner.cn/qiniulmg/20200621113447.png" alt="image-20200621113445453" loading="lazy"></figure>
 ]]></content>
     </entry>
