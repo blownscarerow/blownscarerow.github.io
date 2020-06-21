@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T04:02:54.561Z</updated>
+    <updated>2020-06-21T04:13:02.555Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
@@ -38,8 +38,8 @@ for que in ques_list:
     temp['pic'] = que.find_element_by_xpath('div[1]/img').get_attribute('src') #试题图片地址
     print(temp)
 </code></pre>
-<p>效果如下</p>
-<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200621110336.gif" alt="测试1" loading="lazy"></figure>
+<p>效果如下<br>
+<img src="http://image.scorner.cn/qiniulmg/20200621121142.png" alt="image-20200621121139319" loading="lazy"></p>
 <p>这样便获取了图片和答案的构成的字典</p>
 <h5 id="b图片和答案分离">b.图片和答案分离</h5>
 <pre><code class="language-python">import re
@@ -52,7 +52,7 @@ print(answer)
 print(url)
 </code></pre>
 <p>得到了答案和图片地址的列表</p>
-<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200621111311.png" alt="image-20200621111310050" loading="lazy"></figure>
 <h5 id="c图片下载">c.图片下载</h5>
 <pre><code class="language-python">import requests
 import time 
@@ -66,7 +66,7 @@ for i in url:  # 下载
     print(&quot;下载&quot; + i)
 </code></pre>
 <p>这样所有的图片都被下载下来了</p>
-<figure data-type="image" tabindex="3"><img src="http://image.scorner.cn/qiniulmg/20200621111718.png" alt="image-20200621111716669" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200621111718.png" alt="image-20200621111716669" loading="lazy"></figure>
 <h4 id="三-文字识别">三、文字识别</h4>
 <p>文字识别调用的百度的ocr服务</p>
 <h5 id="a申请百度api接口的教程">a.申请百度api接口的教程</h5>
@@ -94,7 +94,7 @@ for i in range(1, 100): # 有多少张图片写多少张图片
         print(response.json())
 </code></pre>
 <p>识别的效果如下</p>
-<figure data-type="image" tabindex="4"><img src="http://image.scorner.cn/qiniulmg/20200621112316.png" alt="image-20200621112314382" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://image.scorner.cn/qiniulmg/20200621112316.png" alt="image-20200621112314382" loading="lazy"></figure>
 <h5 id="c对识别数据进行清洗">c.对识别数据进行清洗</h5>
 <pre><code class="language-python">regex1 = &quot;log_id.*]&quot;
 
@@ -114,11 +114,11 @@ for m, n in zip(list2, answer): # answer为答案列表
     print(n)
 </code></pre>
 <p>最终结果，但是发现试题的选项选择的不太很好</p>
-<figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200621112656.png" alt="image-20200621112651618" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://image.scorner.cn/qiniulmg/20200621112656.png" alt="image-20200621112651618" loading="lazy"></figure>
 <p>扔到word中，稍微进行修正 如去掉多选题两分，第一章绪论这些 ， 再把 是「cll换成c，再进行局部微调</p>
-<figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200621113236.png" alt="image-20200621113234456" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200621113236.png" alt="image-20200621113234456" loading="lazy"></figure>
 <h4 id="四-结果展示">四、结果展示</h4>
-<figure data-type="image" tabindex="7"><img src="http://image.scorner.cn/qiniulmg/20200621113447.png" alt="image-20200621113445453" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200621113447.png" alt="image-20200621113445453" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
