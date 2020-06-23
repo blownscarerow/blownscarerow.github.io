@@ -2,13 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-21T23:27:48.551Z</updated>
+    <updated>2020-06-23T04:32:21.907Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[PS动漫风]]></title>
+        <id>https://gaixu-github.github.io/post/ps-dong-man-feng/</id>
+        <link href="https://gaixu-github.github.io/post/ps-dong-man-feng/">
+        </link>
+        <updated>2020-06-23T04:30:18.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="一-二次元图片特征">一、二次元图片特征</h4>
+<img src="http://image.scorner.cn/qiniulmg/20200623085133.jpg" alt="你的名字1080P高清壁纸 (2)" style="zoom: 33%;" />
+<ul>
+<li>对比度相对不高</li>
+<li>暗部区没有死角</li>
+<li>绿色，蓝色占比较高</li>
+</ul>
+<h4 id="二-步骤实现">二、步骤实现</h4>
+<p>本文使用图片</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623093036.png" alt="原图01(小尺寸)" style="zoom: 33%;" />
+<h5 id="1-ps滤镜库">1、PS滤镜库</h5>
+<p>干画笔油画滤镜使得图片感觉不那么真实， 具体数值需要长时间进行调试。这里就直接用调试好的数值。</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623102531.gif" alt="测试2" style="zoom: 33%;" />
+<h5 id="2-cameraraw调色">2、CameraRAW调色</h5>
+<p>降低对比度、提高阴影，增强饱和度、锐化、蒙版、增加绿色等，进行图片调色</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623104715.gif" alt="测试" style="zoom: 33%;" />
+<h5 id="3-替换天空">3、替换天空</h5>
+<p>扣掉原图天空，替换素材</p>
+<p>快速选择工具选择天空删除，换上动漫图片的天空，再对天空的细节进行进一步整理</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623111130.gif" alt="测试1" style="zoom: 33%;" />
+<p>对天空进行微调后，最后曲调整画面统一度，换天就完成了</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623113117.gif" alt="测试2" style="zoom: 33%;" />
+<h5 id="4-水面倒影制">4、水面倒影制</h5>
+<p>复制图层，倒置添加蒙版后用渐变工具实现水面倒影</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623115122.gif" alt="测试3" style="zoom:40%;" />
+<p>利用蒙版黑遮白显的特征，用画笔工具对蒙版进行微调，这样水面倒影就制作好了</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623115420.png" alt="image-20200623115417698" style="zoom: 50%;" />
+<h5 id="5-光晕制作">5、光晕制作</h5>
+<p>新建图层，填充黑色并转换为智能对象（对镜头进行调整），添加镜头光晕，混合模式改为滤色</p>
+<img src="http://image.scorner.cn/qiniulmg/20200623120458.gif" alt="测试4" style="zoom: 40%;" />
+<h5 id="6-效果预览">6、效果预览</h5>
+<img src="http://image.scorner.cn/qiniulmg/20200623120728.png" alt="结果" style="zoom:40%;" />
+<h4 id="三-相关素材">三、相关素材</h4>
+<pre><code class="language-html">https://thegai.lanzous.com/iAveRdymtve
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[XSS漏洞]]></title>
         <id>https://gaixu-github.github.io/post/xss-lou-dong/</id>
@@ -284,7 +327,7 @@ for m, n in zip(list2, answer): # answer为答案列表
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ qq头像制作贴图]]></title>
+        <title type="html"><![CDATA[ qq头像拼图制作]]></title>
         <id>https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/</id>
         <link href="https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/">
         </link>
