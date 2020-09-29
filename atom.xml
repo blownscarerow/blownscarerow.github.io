@@ -2,13 +2,66 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaixu-github.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-06-23T10:37:07.189Z</updated>
+    <updated>2020-09-29T13:30:09.973Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaixu-github.github.io/"/>
     <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
     <logo>https://gaixu-github.github.io/images/avatar.png</logo>
     <icon>https://gaixu-github.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
+    <entry>
+        <title type="html"><![CDATA[RSA算法实战]]></title>
+        <id>https://gaixu-github.github.io/post/rsa-suan-fa-shi-zhan/</id>
+        <link href="https://gaixu-github.github.io/post/rsa-suan-fa-shi-zhan/">
+        </link>
+        <updated>2020-09-29T13:27:27.000Z</updated>
+        <summary type="html"><![CDATA[<h4 id="1抓包分析">1.抓包分析</h4>
+<p>网址 <strong>http://login.wsgjp.com.cn/</strong></p>
+<p>以网上管家婆为例，公司名账号名密码全部aaaa</p>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200929205039.png" alt="image-20200929205031550" loading="lazy"></figure>
+<p>抓包分析，在login包中</p>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200929205429.png" alt="image-20200929205427975" loading="lazy"></figure>
+<p>userName，password均被加密处理</p>
+<h4 id="2js逆向定位">2.js逆向定位</h4>
+<p>搜索username</p>
+<p><img src="http://image.scorner.cn/qiniulmg/20200929205845.png" alt="image-20200929205844291" loading="lazy">定位到这里，下断点试试，在这里断住说明这里就是加密所需的</p>
+<figure data-type="image" tabindex="3"><img src="http://image.scorner.cn/qiniulmg/20200929210000.png" alt="image-20200929205958616" loading="lazy"></figure>
+<p><code>var key = new RSAKeyPair()</code> 说明加密方式为RSA加密</p>
+<h4 id="3逆向写js">3.逆向写js</h4>
+<p>关键代码，将RSA.js 和加密算法导入得</p>
+<figure data-type="image" tabindex="4"><img src="http://image.scorner.cn/qiniulmg/20200929211856.png" alt="image-20200929211854630" loading="lazy"></figure>
+<p>运行以后发现 setMaxDigits未定义</p>
+<p>发现在biglnt中导入得</p>
+<figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200929212153.png" alt="image-20200929212124824" loading="lazy"></figure>
+<p>&lt;img src=&quot;http://image.scorner.cn/qiniulmg/20200929212250.png&quot; alt=&quot;image-20200929212249033&quot; style=&quot;zoom:18</p>
+]]></summary>
+        <content type="html"><![CDATA[<h4 id="1抓包分析">1.抓包分析</h4>
+<p>网址 <strong>http://login.wsgjp.com.cn/</strong></p>
+<p>以网上管家婆为例，公司名账号名密码全部aaaa</p>
+<figure data-type="image" tabindex="1"><img src="http://image.scorner.cn/qiniulmg/20200929205039.png" alt="image-20200929205031550" loading="lazy"></figure>
+<p>抓包分析，在login包中</p>
+<figure data-type="image" tabindex="2"><img src="http://image.scorner.cn/qiniulmg/20200929205429.png" alt="image-20200929205427975" loading="lazy"></figure>
+<p>userName，password均被加密处理</p>
+<h4 id="2js逆向定位">2.js逆向定位</h4>
+<p>搜索username</p>
+<p><img src="http://image.scorner.cn/qiniulmg/20200929205845.png" alt="image-20200929205844291" loading="lazy">定位到这里，下断点试试，在这里断住说明这里就是加密所需的</p>
+<figure data-type="image" tabindex="3"><img src="http://image.scorner.cn/qiniulmg/20200929210000.png" alt="image-20200929205958616" loading="lazy"></figure>
+<p><code>var key = new RSAKeyPair()</code> 说明加密方式为RSA加密</p>
+<h4 id="3逆向写js">3.逆向写js</h4>
+<p>关键代码，将RSA.js 和加密算法导入得</p>
+<figure data-type="image" tabindex="4"><img src="http://image.scorner.cn/qiniulmg/20200929211856.png" alt="image-20200929211854630" loading="lazy"></figure>
+<p>运行以后发现 setMaxDigits未定义</p>
+<p>发现在biglnt中导入得</p>
+<figure data-type="image" tabindex="5"><img src="http://image.scorner.cn/qiniulmg/20200929212153.png" alt="image-20200929212124824" loading="lazy"></figure>
+<p>&lt;img src=&quot;http://image.scorner.cn/qiniulmg/20200929212250.png&quot; alt=&quot;image-20200929212249033&quot; style=&quot;zoom:18</p>
+<!-- more -->
+<p>0%;float:left&quot; /&gt;</p>
+<p>发现BarrettMu 未定义，搜索导入便得到了加密的结果</p>
+<figure data-type="image" tabindex="6"><img src="http://image.scorner.cn/qiniulmg/20200929212426.png" alt="image-20200929212424933" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="http://image.scorner.cn/qiniulmg/20200929212454.png" alt="image-20200929212453267" loading="lazy"></figure>
+<p>这样便得到了用户名加密的过程，可以用python和易语言做逆向登录使用</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[拍一拍内容自定义（恶搞）]]></title>
         <id>https://gaixu-github.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/</id>
@@ -599,43 +652,6 @@ http://debugx5.qq.com
 </code></pre>
 <p>重新打开上面链接 取消vConsole的选择即可</p>
 <img src="http://image.scorner.cn/qiniulmg/20200619090052.gif" style="zoom:100%;float:left" />
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 钉钉群直播下载]]></title>
-        <id>https://gaixu-github.github.io/post/dingding/</id>
-        <link href="https://gaixu-github.github.io/post/dingding/">
-        </link>
-        <updated>2020-06-16T03:29:57.000Z</updated>
-        <content type="html"><![CDATA[<p><mark>注意：只有钉钉群直播才能下载，视频会议无法下载</mark></p>
-<p>本学期受疫情的影响，暂不开学，线上上课，并且返校后进行考试，一些课程用钉钉上，有回放，复习起来比较方便但是看起来不方便，一是只能用钉钉看，二是在线看，<s>费流量啊</s>⚡️，所以尝试下载下来但是………….​</p>
-<img src="http://image.scorner.cn/qiniulmg/20200618142308.png" style="zoom:250%;float:left" />
-<p>从网上找了找，发现钉钉的直播流为m3u8格式，那么方法就很清楚了，分为两步，获取m3u8地址然后进行下载。</p>
-<h2 id="一获取m3u8地址">一.获取m3u8地址</h2>
-<p>我们用fidder抓包来获取m3u8地址</p>
-<h3 id="1fidder的设置">1.fidder的设置</h3>
-<p>根据以下方法设置并且重启</p>
-<img src="http://image.scorner.cn/qiniulmg/20200618142314.gif" style="zoom:100%;float:left" />
-<h3 id="2打开钉钉群直播">2.打开钉钉群直播</h3>
-<img src="http://image.scorner.cn/qiniulmg/20200618142320.gif" alt="钉钉" style="zoom:100%;float:left" />
-<p><mark>选择内容类型为application的那个保存url</mark></p>
-<p>这样我们就获取了m3u8地址</p>
-<h2 id="二用m3u8下载器进行下载">二.用m3u8下载器进行下载</h2>
-<h3 id="1下载过程">1.下载过程</h3>
-<img src="http://image.scorner.cn/qiniulmg/20200618143807.gif" style="zoom:100%;" />
-<p>😃下载完成</p>
-<img src="http://image.scorner.cn/qiniulmg/20200618155049.png" style="zoom: 100%;float:left" />
-<h3 id="2注意问题">2.注意问题</h3>
-<h4 id="a误报">a.误报</h4>
-<p><mark>部分电脑可能出现误报的情形,点击更多信息运行，亲测无毒</mark></p>
-<img src="http://image.scorner.cn/qiniulmg/20200618142331.png" style="zoom:120%;float:left" />
-<h4 id="b下载存放位置">b.下载存放位置</h4>
-<p>在Downloads文件夹下</p>
-<img src="http://image.scorner.cn/qiniulmg/20200618142335.png" style="zoom:100%;float:left" />
-<h2 id="三-文件地址">三、文件地址</h2>
-<pre><code class="language-html">https://thegai.lanzous.com/b01bhri7c
-</code></pre>
-<p>均为绿板，无需安装，解压后即可使用。</p>
 ]]></content>
     </entry>
 </feed>

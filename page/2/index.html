@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+    <div class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -30,36 +30,30 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
+            
           </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E4%B8%80-%E4%BA%8C%E6%AC%A1%E5%85%83%E5%9B%BE%E7%89%87%E7%89%B9%E5%BE%81">一、二次元图片特征</a></li>
-<li><a href="#%E4%BA%8C-%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0">二、步骤实现</a>
-<ul>
-<li><a href="#1-ps%E6%BB%A4%E9%95%9C%E5%BA%93">1、PS滤镜库</a></li>
-<li><a href="#2-cameraraw%E8%B0%83%E8%89%B2">2、CameraRAW调色</a></li>
-<li><a href="#3-%E6%9B%BF%E6%8D%A2%E5%A4%A9%E7%A9%BA">3、替换天空</a></li>
-<li><a href="#4-%E6%B0%B4%E9%9D%A2%E5%80%92%E5%BD%B1%E5%88%B6">4、水面倒影制</a></li>
-<li><a href="#5-%E5%85%89%E6%99%95%E5%88%B6%E4%BD%9C">5、光晕制作</a></li>
-<li><a href="#6-%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88">6、效果预览</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89-%E7%9B%B8%E5%85%B3%E7%B4%A0%E6%9D%90">三、相关素材</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
           </div>
         </div>
       
@@ -103,90 +97,42 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">PS动漫风学习</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2020-06-23 / 2 min read
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="latest-article text-lg text-gray-700 mb-8">
+          <i class="ri-article-line"></i>
+          最新文章
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+      <a href="https://gaixu-github.github.io/post/dingding/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1592477080562&amp;di=f14757c88d56849fb7a2eaa38afdb829&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_lfill%2Cw_300%2Ch_200%2Cg_faces%2Fimages%2F20200505%2Fae84b7699e67478a8f141bbb134c215d.jpeg'">
         </div>
+      </a>
+    
+    <div class="content">
+      <a href="https://gaixu-github.github.io/post/dingding/">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0"> 钉钉群直播下载</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="http://image.scorner.cn/qiniulmg/20200623120728.png" alt="">
-        
-        <div class="post-content yue">
-          <h4 id="一-二次元图片特征">一、二次元图片特征</h4>
-<img src="http://image.scorner.cn/qiniulmg/20200623085133.jpg" alt="你的名字1080P高清壁纸 (2)" style="zoom: 33%;" />
-<ul>
-<li>对比度相对不高</li>
-<li>暗部区没有死角</li>
-<li>绿色，蓝色占比较高</li>
-</ul>
-<h4 id="二-步骤实现">二、步骤实现</h4>
-<p>本文使用图片</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623093036.png" alt="原图01(小尺寸)" style="zoom: 33%;" />
-<h5 id="1-ps滤镜库">1、PS滤镜库</h5>
-<p>干画笔油画滤镜使得图片感觉不那么真实， 具体数值需要长时间进行调试。这里就直接用调试好的数值。</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623102531.gif" alt="测试2" style="zoom: 33%;" />
-<h5 id="2-cameraraw调色">2、CameraRAW调色</h5>
-<p>降低对比度、提高阴影，增强饱和度、锐化、蒙版、增加绿色等，进行图片调色</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623104715.gif" alt="测试" style="zoom: 33%;" />
-<h5 id="3-替换天空">3、替换天空</h5>
-<p>扣掉原图天空，替换素材</p>
-<p>快速选择工具选择天空删除，换上动漫图片的天空，再对天空的细节进行进一步整理</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623111130.gif" alt="测试1" style="zoom: 33%;" />
-<p>对天空进行微调后，最后曲调整画面统一度，换天就完成了</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623113117.gif" alt="测试2" style="zoom: 33%;" />
-<h5 id="4-水面倒影制">4、水面倒影制</h5>
-<p>复制图层，倒置添加蒙版后用渐变工具实现水面倒影</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623115122.gif" alt="测试3" style="zoom:40%;" />
-<p>利用蒙版黑遮白显的特征，用画笔工具对蒙版进行微调，这样水面倒影就制作好了</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623115420.png" alt="image-20200623115417698" style="zoom: 50%;" />
-<h5 id="5-光晕制作">5、光晕制作</h5>
-<p>新建图层，填充黑色并转换为智能对象（对镜头进行调整），添加镜头光晕，混合模式改为滤色</p>
-<img src="http://image.scorner.cn/qiniulmg/20200623120458.gif" alt="测试4" style="zoom: 40%;" />
-<h5 id="6-效果预览">6、效果预览</h5>
-<img src="http://image.scorner.cn/qiniulmg/20200623120728.png" alt="结果" style="zoom:40%;" />
-<h4 id="三-相关素材">三、相关素材</h4>
-<pre><code class="language-html">https://thegai.lanzous.com/iAveRdymtve
-</code></pre>
+      </div>
+      <div class="text-gray-400 text-sm font-light">2020-06-16 / 2 min read</div>
+    </div>
+  </section>
 
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://gaixu-github.github.io/tag/QBaC5t3cd/">
-            <span class="flex-auto">学习记录</span>
-          </a>
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://gaixu-github.github.io/tag/9dngYnBbj/">
-            <span class="flex-auto">PS</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://gaixu-github.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  拍一拍内容自定义（恶搞）
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://gaixu-github.github.io/post/xss-lou-dong/">
-                <h3 class="post-title">
-                  XSS漏洞
-                  <i class="ri-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
+        <div class="read-more">
           
         </div>
+        <div class="index-page">
+          <div class="pagination-container animated fadeIn">
+  
+    <a href="https://gaixu-github.github.io/" class="page-btn"><i class="ri-arrow-left-line"></i> 上一页</a>
+  
+  
+</div>
 
-        
-
+        </div>
       </div>
     </div>
 
