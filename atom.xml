@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://gaixu-github.github.io/</id>
+    <id>https://blownscarerow.github.io/</id>
     <title>我没有失眠啊i</title>
-    <updated>2020-11-03T14:07:12.788Z</updated>
+    <updated>2020-11-03T14:22:04.008Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://gaixu-github.github.io/"/>
-    <link rel="self" href="https://gaixu-github.github.io/atom.xml"/>
-    <logo>https://gaixu-github.github.io/images/avatar.png</logo>
-    <icon>https://gaixu-github.github.io/favicon.ico</icon>
+    <link rel="alternate" href="https://blownscarerow.github.io/"/>
+    <link rel="self" href="https://blownscarerow.github.io/atom.xml"/>
+    <logo>https://blownscarerow.github.io/images/avatar.png</logo>
+    <icon>https://blownscarerow.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 我没有失眠啊i</rights>
     <entry>
         <title type="html"><![CDATA[如何找到心仪的电子书]]></title>
-        <id>https://gaixu-github.github.io/post/ru-he-zhao-dao-xin-yi-de-dian-zi-shu/</id>
-        <link href="https://gaixu-github.github.io/post/ru-he-zhao-dao-xin-yi-de-dian-zi-shu/">
+        <id>https://blownscarerow.github.io/post/ru-he-zhao-dao-xin-yi-de-dian-zi-shu/</id>
+        <link href="https://blownscarerow.github.io/post/ru-he-zhao-dao-xin-yi-de-dian-zi-shu/">
         </link>
         <updated>2020-11-03T13:59:22.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -122,8 +122,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[RSA算法实战]]></title>
-        <id>https://gaixu-github.github.io/post/rsa-suan-fa-shi/</id>
-        <link href="https://gaixu-github.github.io/post/rsa-suan-fa-shi/">
+        <id>https://blownscarerow.github.io/post/rsa-suan-fa-shi/</id>
+        <link href="https://blownscarerow.github.io/post/rsa-suan-fa-shi/">
         </link>
         <updated>2020-09-29T13:42:54.000Z</updated>
         <content type="html"><![CDATA[<h4 id="1抓包分析">1.抓包分析</h4>
@@ -153,8 +153,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[拍一拍内容自定义（恶搞）]]></title>
-        <id>https://gaixu-github.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/</id>
-        <link href="https://gaixu-github.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/">
+        <id>https://blownscarerow.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/</id>
+        <link href="https://blownscarerow.github.io/post/pai-yi-pai-nei-rong-zi-ding-yi-e-gao/">
         </link>
         <updated>2020-06-23T10:20:52.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -184,8 +184,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[PS动漫风学习]]></title>
-        <id>https://gaixu-github.github.io/post/ps-dong-man-feng/</id>
-        <link href="https://gaixu-github.github.io/post/ps-dong-man-feng/">
+        <id>https://blownscarerow.github.io/post/ps-dong-man-feng/</id>
+        <link href="https://blownscarerow.github.io/post/ps-dong-man-feng/">
         </link>
         <updated>2020-06-23T04:30:18.000Z</updated>
         <content type="html"><![CDATA[<h4 id="一-二次元图片特征">一、二次元图片特征</h4>
@@ -227,8 +227,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[XSS漏洞]]></title>
-        <id>https://gaixu-github.github.io/post/xss-lou-dong/</id>
-        <link href="https://gaixu-github.github.io/post/xss-lou-dong/">
+        <id>https://blownscarerow.github.io/post/xss-lou-dong/</id>
+        <link href="https://blownscarerow.github.io/post/xss-lou-dong/">
         </link>
         <updated>2020-06-21T23:07:12.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -355,8 +355,8 @@ function onResponse(req,res){
     </entry>
     <entry>
         <title type="html"><![CDATA[雨课堂试题]]></title>
-        <id>https://gaixu-github.github.io/post/yu-ke-tang-shi-ti-zheng-li/</id>
-        <link href="https://gaixu-github.github.io/post/yu-ke-tang-shi-ti-zheng-li/">
+        <id>https://blownscarerow.github.io/post/yu-ke-tang-shi-ti-zheng-li/</id>
+        <link href="https://blownscarerow.github.io/post/yu-ke-tang-shi-ti-zheng-li/">
         </link>
         <updated>2020-06-21T03:35:13.000Z</updated>
         <content type="html"><![CDATA[<p>雨课堂经常做随堂测试，但是每个题都是图片形式的，复习起来很不方便。便萌发了整理的念头。</p>
@@ -467,8 +467,8 @@ for m, n in zip(list2, answer): # answer为答案列表
     </entry>
     <entry>
         <title type="html"><![CDATA[逆向学习笔记——nop填充]]></title>
-        <id>https://gaixu-github.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/</id>
-        <link href="https://gaixu-github.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/">
+        <id>https://blownscarerow.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/</id>
+        <link href="https://blownscarerow.github.io/post/ruan-jian-po-jie-xue-xi-bi-ji-nop-tian-chong/">
         </link>
         <updated>2020-06-20T23:57:47.000Z</updated>
         <content type="html"><![CDATA[<h3 id="一-软件特征">一、软件特征</h3>
@@ -501,8 +501,8 @@ for m, n in zip(list2, answer): # answer为答案列表
     </entry>
     <entry>
         <title type="html"><![CDATA[ qq头像拼图制作]]></title>
-        <id>https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/</id>
-        <link href="https://gaixu-github.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/">
+        <id>https://blownscarerow.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/</id>
+        <link href="https://blownscarerow.github.io/post/pa-qu-qq-hao-you-tou-xiang-zhi-zuo-tie-tu/">
         </link>
         <updated>2020-06-20T13:45:40.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -593,8 +593,8 @@ if __name__ == '__main__':
     </entry>
     <entry>
         <title type="html"><![CDATA[数据可视化制作]]></title>
-        <id>https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/</id>
-        <link href="https://gaixu-github.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/">
+        <id>https://blownscarerow.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/</id>
+        <link href="https://blownscarerow.github.io/post/shu-ju-ke-shi-hua-zhi-zuo/">
         </link>
         <updated>2020-06-20T01:41:44.000Z</updated>
         <content type="html"><![CDATA[<p>前段时间看BBC新闻发现这样一个图片，便好奇怎么做出来。查阅相关资料后，便做了一个类似的出来。分为两步，一是数据的准备，二是可视化图表的制作。</p>
@@ -655,8 +655,8 @@ for i in zip(dates,counts):
     </entry>
     <entry>
         <title type="html"><![CDATA[记一次有声小说爬取]]></title>
-        <id>https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/</id>
-        <link href="https://gaixu-github.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
+        <id>https://blownscarerow.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/</id>
+        <link href="https://blownscarerow.github.io/post/ji-yi-ci-shuo-you-sheng-yin-pin-pa-qu/">
         </link>
         <updated>2020-06-19T03:19:05.000Z</updated>
         <content type="html"><![CDATA[<p><mark>本文仅供学习使用</mark></p>
